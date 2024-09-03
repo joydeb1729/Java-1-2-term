@@ -1,0 +1,35 @@
+public class MainClass {
+02
+    public static void main(String[] args) {
+03
+        Animal animal = new Animal();
+04
+        Bird bird = new Bird();
+05
+        Dog dog = new Dog();
+06
+         
+07
+        System.out.println();
+08
+         
+09
+        animal.sleep();
+10
+        animal.eat();
+11
+         
+12
+        bird.sleep();
+13
+        bird.eat();
+14
+         
+15
+        dog.sleep();
+16
+        dog.eat();
+17
+    }
+18
+}

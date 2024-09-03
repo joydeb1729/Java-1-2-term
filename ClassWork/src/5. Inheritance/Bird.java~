@@ -1,0 +1,31 @@
+public class Bird extends Animal {
+02
+    public Bird() {
+03
+        super();
+04
+        System.out.println("A new bird has been created!");
+05
+    }
+06
+     
+07
+    @Override
+08
+    public void sleep() {
+09
+        System.out.println("A bird sleeps...");
+10
+    }
+11
+     
+12
+    @Override
+13
+    public void eat() {
+14
+        System.out.println("A bird eats...");
+15
+    }
+16
+}

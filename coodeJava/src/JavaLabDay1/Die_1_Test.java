@@ -1,0 +1,39 @@
+package JavaLabDay1;
+
+/**
+ * Auto Generated Java Class.
+ */
+import java.util.*;
+
+public class Die_1_Test {
+  
+  static Random rand = new Random();
+  
+  
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    System.out.print("Input the number of sides of the two dices and Maximum nember of throws: ");
+    int side1 = scan.nextInt();
+    int side2 = scan.nextInt();
+    int numThrow = scan.nextInt();
+    System.out.println("Number of snake eyes :"+numSnakeEyes(side1, side2, numThrow));
+  }
+   
+  static int roll(int numSides) {
+    return 1 + rand.nextInt(numSides);
+  }
+  
+  static int numSnakeEyes(int sides1, int sides2, int numThrows) {
+    int count = 0;
+    for(int i = 0; i < numThrows; i++) {
+      int face1 = roll(sides1);
+      int face2 = roll(sides2);
+      if (face1 == 1 && face2 == 1)
+        count++;
+    }
+    
+    return count;
+  }
+  
+}

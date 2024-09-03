@@ -1,0 +1,29 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class Die_1_Test {
+  
+  
+  public static void main(String[] args) { 
+    
+  }
+  
+  static Random rand = new Random();
+  
+  static int roll(int numSides) {
+    return 1 + rand.nextInt(numSides);
+  }
+  
+  static int numSnakeEyes(int sides1, int sides2, int numThrows) {
+    int count = 0;
+    for(int i = 0; i < numThrows; i++) {
+      int face1 = roll(sides1);
+      int face2 = roll(sides2);
+      if (face1 == 1 && face2 == 1)
+        count++;
+    }
+    
+    return count;
+  }
+  
+}

@@ -1,0 +1,31 @@
+public class Dog extends Animal {
+02
+    public Dog() {
+03
+        super();
+04
+        System.out.println("A new dog has been created!");
+05
+    }
+06
+     
+07
+    @Override
+08
+    public void sleep() {
+09
+        System.out.println("A dog sleeps...");
+10
+    }
+11
+     
+12
+    @Override
+13
+    public void eat() {
+14
+        System.out.println("A dog eats...");
+15
+    }
+16
+}

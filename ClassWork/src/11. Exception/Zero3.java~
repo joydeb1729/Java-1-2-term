@@ -1,0 +1,17 @@
+public class Zero3 {
+   public static void main (String[] args) {
+      m1();
+   }
+   
+   static void m1() {
+       try {
+           m2();
+       }catch(MyException e) {
+           e.printStackTrace();
+       }
+       System.out.println ("Exception was handled, I am still here");
+   }
+   static void m2() throws MyException {
+        throw new MyException("no excuse");
+   }
+}

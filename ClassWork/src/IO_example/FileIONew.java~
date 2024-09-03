@@ -1,0 +1,78 @@
+/* demonstrating reading and writing text files
+ */
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+
+public class FileIONew
+{
+    public static void main(String[] arg)
+    {
+ try
+     {
+  Scanner inFileStream = new Scanner(new File("in.txt"));
+
+  String name = null;
+  int age = 0;
+  float gpa = 0;
+  while (inFileStream.hasNext())
+      {
+   name = inFileStream.next();
+   age = inFileStream.nextInt();
+   gpa = inFileStream.nextFloat();
+   
+   System.out.println(name + ' ' + age);
+      }
+
+
+  inFileStream.close();
+
+     }
+ catch(FileNotFoundException e)
+     {
+  System.out.println(e.getMessage());
+  System.out.println("in.txt not found");
+  System.exit(-1);
+     }
+ catch(IOException e)
+     {
+  System.out.println(e.getMessage());
+  System.out.println("Error reading in.txt");
+  System.exit(-1);
+     }
+
+
+
+ try
+     {
+         PrintWriter outFileStream = new PrintWriter(new File("out.txt"));
+
+  outFileStream.println("Hello World");
+  outFileStream.println("Good Morning");
+
+  outFileStream.close();
+     }
+ catch(FileNotFoundException e)
+     {
+  System.out.println(e.getMessage());
+  System.out.println("Can't open out.txt");
+  System.exit(-1);
+  }
+ catch(IOException e)
+     {
+  System.out.println(e.getMessage());
+  System.out.println("Error writing out.txt");
+  System.exit(-1);
+     }
+
+
+ File outFile = new File("../FileIO/out.txt");
+ System.out.println(outFile.exists());
+ System.out.println(outFile.length());
+ System.out.println(outFile.getName());
+ System.out.println(outFile.getPath());
+    }
+}
+

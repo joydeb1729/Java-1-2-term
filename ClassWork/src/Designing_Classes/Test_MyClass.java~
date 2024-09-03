@@ -1,0 +1,17 @@
+
+public class Test_MyClass {
+  
+  
+  public static void main(String[] args) { 
+    
+    MyClass obj;
+    
+    for (int scan=1; scan <= 10; scan++)
+      obj = new MyClass();
+    
+    System.out.println ("Objects created: " + MyClass.getCount());
+    
+    
+  }
+  
+}

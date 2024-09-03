@@ -1,0 +1,14 @@
+class Emp{
+    int eno;
+    String name;
+    public Emp(int eno, String name){
+        this.eno = eno;
+        this.name=name;
+    }
+    public void setName(String name){
+      this.name = name;
+    }
+    public String toString(){
+      return "\nEmployee No: "+eno+"\tName: "+name;
+    }
+}

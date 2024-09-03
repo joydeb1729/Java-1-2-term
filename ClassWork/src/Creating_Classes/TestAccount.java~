@@ -1,0 +1,21 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class TestAccount {
+  
+  
+  public static void main(String[] args) { 
+    Account a1 = new Account("Man Na",1,999.99);
+    Account a2 = new Account("No Man",2,1999.99);
+    
+    a1.deposit(1000);
+    a2.withdraw(1000);
+    
+    System.out.println(a1);
+    System.out.println(a2);
+    
+  }
+  
+  /* ADD YOUR CODE HERE */
+  
+}

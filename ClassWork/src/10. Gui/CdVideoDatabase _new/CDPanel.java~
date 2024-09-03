@@ -1,0 +1,21 @@
+import javax.swing.*;
+import java.awt.*;
+
+class CDPanel extends ItemPanel {
+ TextEntry artist = new TextEntry("Enter the artist ");
+ IntEntry nTracks = new IntEntry("Enter the number of tracks ");
+ 
+ public CDPanel(ItemListing listing) {
+  super("CD Entry", listing);
+  add(artist);
+  add(nTracks);
+  JButton button = new JButton("Create the CD");
+  button.addActionListener(this);
+  add(button);
+ }
+ 
+ public Item getItem() {
+  return new CD(title.getValue(), artist.getValue (), 
+   nTracks.getIntValue (), playingTime.getIntValue ());
+ }
+}
